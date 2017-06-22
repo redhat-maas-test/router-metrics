@@ -1,0 +1,24 @@
+version: 1.0
+name: jboss-amqmaas-1-tech-preview/amqmaas10-routermetrics-openshift
+from: jboss/base-rhel7:1.0
+user: 185
+dogen:
+    version: "2.0.1"
+    ssl_verify: false
+cmd:
+    - "python"
+    - "/opt/router-metrics.py"
+
+packages:
+    - python2-pip
+    - qpid-proton
+
+sources:
+    - artifact: router-metrics.py
+           
+scripts:    
+    - package: router-metrics
+      exec: install
+
+ports:
+    - value: 8080
