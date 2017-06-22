@@ -11,7 +11,7 @@ cmd:
 
 packages:
     - python2-pip
-    - qpid-proton
+    - python-qpid-proton
 
 sources:
     - artifact: router-metrics.py
