@@ -10,7 +10,7 @@ cmd:
     - "/opt/router-metrics.py"
 
 packages:
-    - python2-pip
+    - python27-python-pip
     - python-qpid-proton
 
 sources:
